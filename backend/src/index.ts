@@ -1,9 +1,8 @@
 import express from 'express'
-
+import routes from './routes'
+import routeUser from './routes/routeUser'
 const app = express();
 
-app.get('/', (req, res) => {
-    return res.send('Hello World! TS :O 3')
-})
+app.use('/users', routeUser);
 
 app.listen(3333);
